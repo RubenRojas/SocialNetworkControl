@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">SocialNetworkControl</string>
-
+    <string name="app_name">Social Network Control</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <!-- Login -->
+    <string name="loginTitle">Bienvenido. Por favor Ingresa con tu cuenta de Google</string>
 </resources>
