@@ -2,8 +2,16 @@
     <string name="app_name">Social Network Control</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="database_version">1</string>
 
 
     <!-- Login -->
     <string name="loginTitle">Bienvenido. Por favor Ingresa con tu cuenta de Google</string>
+
+    <!-- Seleccion de RRSS -->
+    <string name="select_RRSS_title">Selección de Redes Sociales</string>
+    <string name="select_RRSS_subtitle">Selecciona las Redes Sociales que quieres controlar</string>
+    <string name="select_RRSS_nextButton">Siguiente</string>
+
+
 </resources>

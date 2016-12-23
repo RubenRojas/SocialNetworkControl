@@ -35,7 +35,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".SelectRRSS"></activity>
+        <activity android:name=".SelectRRSS" />
+        <activity android:name=".ValidaRRSS" />
+        <activity android:name=".CrearEstados" />
+        <activity android:name=".AsignarEstado" />
+        <activity android:name=".Dash"></activity>
     </application>
 
 </manifest>

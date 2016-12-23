@@ -98,4 +98,5 @@ public class Utils {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+
 }

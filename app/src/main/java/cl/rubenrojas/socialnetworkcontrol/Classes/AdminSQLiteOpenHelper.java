@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import cl.rubenrojas.socialnetworkcontrol.R;
+
 /**
  * Created by rubro on 18-07-2016.
  */
@@ -16,28 +18,13 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //tabla de usuario
-        String query="create table usuario(correo varchar(25) primary key," +
-                "pass varchar(25)," +
-                "nombre varchar(25), " +
-                "fono varchar(25), " +
-                "ultimaCentral varchar(25)," +
-                "origen varchar(25),  " + //facebook // google
-                "imageUrl text, " + //facebook // google
-                "movilValidado varchar(2)  " + //SI // NO
+        String query="create table rrss_seleccionada(nombre varchar(30) primary key," +
+                "imagen varchar(30), packageName varchar(80)" +
                 ")";
 
         db.execSQL(query);
 
-
-        query="create table taximetro(" +
-                "tiempo_det varchar(25), " +
-                "distancia varchar(25), " +
-                "hora_inicial varchar(25), " +
-                "valor varchar(25)" +
-                ")";
-        db.execSQL(query);
-
-        db.execSQL("insert into taximetro(tiempo_det, distancia, hora_inicial, valor ) values ('0', '0', '0', '0')");
+       // db.execSQL("insert into estado(nombre, descripcion) values ('"+ R.string.accept+"', 'Lo siento, estoy durmiendo', '0', '0')");
 
 
     }
@@ -70,18 +57,6 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL("insert into taximetro(tiempo_det, distancia, hora_inicial, valor ) values ('0', '0', '0', '0')");
     }
 
-    public static void reiniciaTaximetro(SQLiteDatabase db){
-        ContentValues registro = new ContentValues();
-        registro.put("tiempo_det", "0");
-        registro.put("distancia", "0");
-        registro.put("valor", "0");
-        registro.put("hora_inicial", "0");
-        try{
-            db.update("taximetro", registro, null, null);
-        }
-        catch (Exception e){
-            Log.d("Develop", e.toString());
-        }
-    }
+
 
 }
