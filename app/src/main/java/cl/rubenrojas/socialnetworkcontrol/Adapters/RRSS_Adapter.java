@@ -72,10 +72,12 @@ public class RRSS_Adapter extends RecyclerView.Adapter<RRSS_Adapter.RRSSViewHold
 
     @Override
     public void onBindViewHolder(RRSSViewHolder holder, int position) {
+
         final SQLiteDatabase bd;
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(mContext,
                 "SNC", null, Integer.parseInt(mContext.getString(R.string.database_version)));
         bd = admin.getWritableDatabase();
+
         final RRSS rrss = redesSociales.get(position);
         holder.nombreRRSS.setText(rrss.nombre);
         int id_img = mContext.getResources().getIdentifier(rrss.imagen, "drawable", mContext.getPackageName());

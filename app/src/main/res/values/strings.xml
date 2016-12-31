@@ -12,6 +12,19 @@
     <string name="select_RRSS_title">Selección de Redes Sociales</string>
     <string name="select_RRSS_subtitle">Selecciona las Redes Sociales que quieres controlar</string>
     <string name="select_RRSS_nextButton">Siguiente</string>
+    <string name="title_activity_estados">Estados</string>
+
+
+    <!-- dialogo estado -->
+    <string name="estado_nombre">Estado</string>
+    <string name="estado_mensaje">Mensaje</string>
+
+    <string name="add_estado_title">Agregar Estado</string>
+    <string name="add_estado_desc">Ingresa los datos necesarios para crear un nuevo Estado / Mensaje</string>
+
+    <string name="delete_estado_title">Borrar Estado</string>
+    <string name="delete_estado_desc">¿Estás seguro de que quieres borrar este Estado?</string>
+
 
 
 </resources>
