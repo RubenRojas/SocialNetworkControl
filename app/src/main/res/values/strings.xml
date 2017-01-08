@@ -16,6 +16,9 @@
 
 
     <!-- dialogo estado -->
+    <string name="estado_titulo_editar">Editar Estado</string>
+    <string name="estado_titulo_crear">Nuevo Estado</string>
+
     <string name="estado_nombre">Estado</string>
     <string name="estado_mensaje">Mensaje</string>
 
@@ -25,6 +28,19 @@
     <string name="delete_estado_title">Borrar Estado</string>
     <string name="delete_estado_desc">¿Estás seguro de que quieres borrar este Estado?</string>
 
+    <string name="update_estado_title">Actualizar Estado</string>
+    <string name="update_estado_desc">Modifica los datos que quieres actualizar</string>
+    <string name="title_activity_ajustes">Settings</string>
+    <string name="save_btn">Guardar</string>
+    <string name="estado_mensaje_editado">Estado Editado.</string>
+    <string name="estado_mensaje_creado">Estado Creado</string>
+
+
+
+    <!-- Dash -->
+    <string name="dash_titulo">Monitoreo</string>
+    <string name="dash_option_monitoreo_name">Monitoreo Activo</string>
+    <string name="dash_option_estado_name">Estado Activo</string>
 
 
 </resources>

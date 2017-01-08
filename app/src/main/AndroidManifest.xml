@@ -39,11 +39,14 @@
         <activity android:name=".ValidaRRSS" />
         <activity android:name=".AsignarEstado" />
         <activity android:name=".Dash" />
-
         <activity
             android:name=".Estados"
             android:label="@string/title_activity_estados"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ajustes"
+            android:label="@string/title_activity_ajustes" />
+        <activity android:name=".EstadosComp"></activity>
     </application>
 
 </manifest>

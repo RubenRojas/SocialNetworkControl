@@ -72,6 +72,19 @@ public class Estado {
         return arr;
 
     }
+    public static ArrayList<String> getListaEstados(SQLiteDatabase bd){
+        String query = "select estado, mensaje from estado order by estado asc";
+        Cursor fila = bd.rawQuery(query, null);
+        Estado us;
+        ArrayList<String> arr = new ArrayList<>();
+        ////Log.d("Develop", fila.getString(0));
+        while(fila.moveToNext()){
+            us =  new Estado(fila.getString(0), fila.getString(1));
+            arr.add(us.getEstado());
+        }
+        return arr;
+
+    }
     public boolean insertEstado(SQLiteDatabase bd){
         Boolean pass;
         ContentValues registro = new ContentValues();
@@ -92,21 +105,7 @@ public class Estado {
         Log.d("Develop", "Pass: "+pass);
         return pass;
     }
-    public boolean updateUsuario(SQLiteDatabase bd){
-        Boolean pass;
-        ContentValues registro = new ContentValues();
-        registro.put("estado", this.estado);
-        registro.put("mensaje", this.mensaje);
 
-        try{
-            bd.update("estado", registro,null, null);
-            pass = true;
-        }
-        catch (Exception e){
-            pass = false;
-        }
-        return true;
-    }
     public boolean deleteUsuario(SQLiteDatabase bd){
         Boolean pass;
         try{

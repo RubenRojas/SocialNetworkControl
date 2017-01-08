@@ -2,22 +2,21 @@ package cl.rubenrojas.socialnetworkcontrol.Adapters;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import cl.rubenrojas.socialnetworkcontrol.Classes.AdminSQLiteOpenHelper;
 import cl.rubenrojas.socialnetworkcontrol.Classes.Estado;
-import cl.rubenrojas.socialnetworkcontrol.Estados;
+import cl.rubenrojas.socialnetworkcontrol.EstadosComp;
 import cl.rubenrojas.socialnetworkcontrol.R;
 
 /**
@@ -60,7 +59,7 @@ public class Estado_Adapter extends RecyclerView.Adapter<Estado_Adapter.EstadoVi
     }
 
     @Override
-    public void onBindViewHolder(EstadoViewHolder holder, final int position) {
+    public void onBindViewHolder(final EstadoViewHolder holder, final int position) {
 
         final SQLiteDatabase bd;
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(mContext,
@@ -98,7 +97,10 @@ public class Estado_Adapter extends RecyclerView.Adapter<Estado_Adapter.EstadoVi
         holder.editar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext,"Editar", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(mContext, EstadosComp.class);
+                i.putExtra("estado", estado.getEstado());
+                i.putExtra("mensaje", estado.getMensaje());
+                mContext.startActivity(i);
             }
         });
 
