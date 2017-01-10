@@ -60,7 +60,7 @@ public class SelectRRSS extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SelectRRSS.this, Estados.class));
+                startActivity(new Intent(SelectRRSS.this, Dash.class));
                 SelectRRSS.this.finish();
             }
         });

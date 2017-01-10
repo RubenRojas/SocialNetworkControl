@@ -5,13 +5,17 @@
     android:id="@+id/activity_dash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:padding="5dp"
-    tools:context="cl.rubenrojas.socialnetworkcontrol.Dash">
+    tools:context="cl.rubenrojas.socialnetworkcontrol.Monitoreo">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,36 +49,34 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
+                android:id="@+id/switchCompat"
                 android:checked="true"/>
         </LinearLayout>
-
-        <LinearLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvRRSS"
+            android:background="#fff"
             android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            android:layout_marginBottom="15dp"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:text="@string/dash_option_estado_name"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:layout_weight="50"
-                android:textSize="18sp"
-                android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_disponible"
+            android:text="@string/monitoreo_no_disponible"
+            android:layout_marginTop="-320dp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:background="#dcdcdc"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="@color/primaryText"
+            />
 
-            <com.jaredrummler.materialspinner.MaterialSpinner
-                android:id="@+id/listaEstados"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:background="#000"
-                android:layout_below="@+id/textView56"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-        </LinearLayout>
+
+
 
 
 

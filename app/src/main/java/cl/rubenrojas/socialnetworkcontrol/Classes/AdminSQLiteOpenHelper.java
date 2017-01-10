@@ -34,7 +34,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "monitoreoActivo varchar(2)"+
                 ")";
         db.execSQL(query);
-        query = "insert into opciones(estadoActivo, monitoreoActivo) values('0', 'NO'";
+        query = "insert into opciones(estadoActivo, monitoreoActivo) values('0', 'NO')";
         db.execSQL(query);
 
 

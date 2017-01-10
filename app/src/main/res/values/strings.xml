@@ -4,6 +4,10 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="database_version">1</string>
 
+    <!-- Dash mennu-->
+    <string name="menu_entry_state_list">Estados</string>
+    <string name="menu_entry_monitoring">Monitoreo</string>
+
 
     <!-- Login -->
     <string name="loginTitle">Bienvenido. Por favor Ingresa con tu cuenta de Google</string>
@@ -36,11 +40,25 @@
     <string name="estado_mensaje_creado">Estado Creado</string>
 
 
-
-    <!-- Dash -->
+    <!-- Monitoreo -->
     <string name="dash_titulo">Monitoreo</string>
     <string name="dash_option_monitoreo_name">Monitoreo Activo</string>
     <string name="dash_option_estado_name">Estado Activo</string>
+    <string name="title_activity_dash">Dash</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="monitoreo_no_disponible">Monitoreo no Disponible</string>
+
+    <string name="rrss_estado_activo">ACTIVO/A</string>
+    <string name="rrss_estado_inactivo">INACTIVO/A</string>
+    <string name="rrss_desc_estado_activo">La red social funciona sin problemas</string>
+    <string name="rrss_desc_estado_inactivo">La red social presenta problemas. Pincha <b>AQUI</b> para mas información.</string>
+
+
+
 
 
 </resources>
