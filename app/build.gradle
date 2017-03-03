@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    buildToolsVersion '25.0.0'
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
@@ -56,3 +56,4 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.android.support:support-vector-drawable:24.2.1'
 }
+apply plugin: 'com.google.gms.google-services'

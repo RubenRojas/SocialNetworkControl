@@ -2,7 +2,7 @@
     <string name="app_name">Social Network Control</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="database_version">1</string>
+    <string name="database_version">2</string>
 
     <!-- Dash mennu-->
     <string name="menu_entry_state_list">Estados</string>

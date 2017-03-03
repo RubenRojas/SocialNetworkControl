@@ -37,6 +37,13 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         query = "insert into opciones(estadoActivo, monitoreoActivo) values('0', 'NO')";
         db.execSQL(query);
 
+        query="create table usuario(" +
+                "nombre_usuario varchar(50), " +
+                "correo varchar(50), " +
+                "photo_url varchar(250)" +
+                ")";
+        db.execSQL(query);
+
 
        // db.execSQL("insert into estado(nombre, descripcion) values ('"+ R.string.accept+"', 'Lo siento, estoy durmiendo', '0', '0')");
 
@@ -65,10 +72,15 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 "monitoreoActivo varchar(2)"+
                 ")";
         db.execSQL(query);
-        query = "insert into opciones(estadoActivo, monitoreoActivo) values('0', 'NO'";
+        query = "insert into opciones(estadoActivo, monitoreoActivo) values('0', 'NO')";
         db.execSQL(query);
 
-
+        query="create table usuario(" +
+                "nombre_usuario varchar(50), " +
+                "correo varchar(50), " +
+                "photo_url varchar(250)" +
+                ")";
+        db.execSQL(query);
     }
 
 

@@ -3,24 +3,37 @@ package cl.rubenrojas.socialnetworkcontrol;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
+import cl.rubenrojas.socialnetworkcontrol.Classes.AdminSQLiteOpenHelper;
+import cl.rubenrojas.socialnetworkcontrol.Classes.Usuario;
+
 import static cl.rubenrojas.socialnetworkcontrol.Classes.CheckNetwork.isInternetAvailable;
 
 
 public class Splash extends AppCompatActivity {
-
+    SQLiteDatabase bd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this,
+                "SNC", null, Integer.parseInt(getString(R.string.database_version)));
+        bd = admin.getWritableDatabase();
 
         if(isInternetAvailable(Splash.this)){
-                continuar();
+            if(Usuario.someoneLogued(bd)){
+                continuar(Dash.class);
+            }
+            else{
+                continuar(Login.class);
+            }
+
         }
         else{
             new AlertDialog.Builder(this)
@@ -33,11 +46,11 @@ public class Splash extends AppCompatActivity {
                     }).create().show();
         }
     }
-    private void continuar(){
+    private void continuar(final Class cls){
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Splash.this, Login.class));
+                startActivity(new Intent(Splash.this, cls));
                 Splash.this.finish();
 
             }

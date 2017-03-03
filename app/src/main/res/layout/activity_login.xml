@@ -24,6 +24,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:src="@drawable/appicon"
+            android:layout_marginTop="50dp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -42,14 +43,27 @@
             android:text="@string/loginTitle"
             android:layout_marginTop="5dp"
              />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/singin"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/login_google"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:id="@+id/googleButton"
+                android:src="@drawable/google_plus"
+                android:background="#EA4355"
+                android:padding="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
     </LinearLayout>
 
 </RelativeLayout>

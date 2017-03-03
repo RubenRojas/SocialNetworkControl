@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "659268039278",
+    "firebase_url": "https://socialnetworkcontrol-275d8.firebaseio.com",
+    "project_id": "socialnetworkcontrol-275d8",
+    "storage_bucket": "socialnetworkcontrol-275d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659268039278:android:db8b7c1290586de3",
+        "android_client_info": {
+          "package_name": "cl.rubenrojas.socialnetworkcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659268039278-13s72ht8c8o148jmamrttodc89ak20jt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.rubenrojas.socialnetworkcontrol",
+            "certificate_hash": "44e69a95bafa685ef967a4442af7e7dcaa9e36f4"
+          }
+        },
+        {
+          "client_id": "659268039278-tnks6mqfro1er2ndhp1423lce8en4jqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxcEw2kb3j86Bi0dZUoziNxgQ3d486YoY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659268039278-tnks6mqfro1er2ndhp1423lce8en4jqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
