@@ -98,4 +98,18 @@ public class Usuario {
         }
         return pass;
     }
+
+    public static Usuario getUsuario(SQLiteDatabase bd) {
+        String query = "select nombre_usuario, correo, photo_url from usuario limit 1";
+        Cursor fila = bd.rawQuery(query, null);
+        Usuario us;
+        ////Log.d("Develop", fila.getString(0));
+        if (fila.moveToFirst()) {
+            us = new Usuario(fila.getString(0), fila.getString(1), fila.getString(2));
+            return us;
+        }
+        else{
+            return null;
+        }
+    }
 }
